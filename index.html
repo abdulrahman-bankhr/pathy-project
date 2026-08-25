@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الكتب الرقميه</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            direction:rtl;
+        }
+    </style>
+</head>
+<body>
+<!-- Header with nav inside -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">📚 متجر الكتب الرقميه</h1>
+        <ul class="nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#products">الكتب</a></li>
+            <li><a href="#contact">التواصل</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeBtn">🌙</button>
+            <button id="cartBtn">
+                📖 <span id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+ </header>
+<main>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <h2>نساعدك على اختيار كتابك القادم</h2>
+        <p>
+            اكتشف أحدث الكتب الإلكترونية بأسعار في متناول الجميع
+        </p>
+        <a href="#products" class="btn">
+            تصفح المكتبة
+        </a>
+    </div>
+</section>
+<!-- Products Section -->
+<section id="products" class="products-section">
+    <div class="section-header">
+        <p class="section-subtitle">مجموعة كتبنا</p>
+        <h2>تصفح مكتبتنا</h2>
+        <p>
+            القراءة التي تناسب اهتماماتك وشغفك
+        </p>
+    </div>
+    <div class="product-controls">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="البحث في الكتب..."
+            >
+        </div>
+        <div class="filter-box">
+            <label for="categoryFilter">الصنف</label>
+            <select id="categoryFilter">
+                <option value="all">الجميع</option>
+                <option value="fiction">روايات</option>
+                <option value="tech">تقنية</option>
+                <option value="history">تاريخ</option>
+                <option value="islamic">اسلاميه</option>
+            </select>
+        </div>
+    </div>
+    <!--Products dynamic container-->
+    <div
+        id="productContainer"
+        class="product-grid">
+    </div>
+</section>
+<!--contact section -->
+ <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <p class="section-subtitle">
+                ابقى على تواصل معنا
+            </p>
+            <h2>دعنا نتحدث</h2>
+            <p>
+                اذا كنت ترغب بالاستفسار عن اي كتاب، اتصل بنا و سنرد عليك في الحال
+            </p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <div>
+                        <strong>البريد الالكتروني</strong>
+                        <p>hello@bookstore.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span>📞</span>
+                    <div>
+                        <strong>التلفون</strong>
+                        <p style="direction: ltr;">+966 50 123 4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <div>
+                        <strong>الموقع</strong>
+                        <p>الرياض - المملكة العربية السعودية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-wrapper">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">
+                            الاسم
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="محمد احمد"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            البريد الالكتروني
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="john@example.com"
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label for="subject">
+                        الموضوع
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="كيف نساعدك؟"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="message">
+                        الرسالة
+                    </label>
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="اكتب رسالتك هنا"
+                    ></textarea>
+                </div>
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    ارسل →
+                </button>
+                <p id="formMessage"></p>
+            </form>
+        </div>
+    </div>
+ </section>
+
+</main>
+<!-- Page footer -->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>متجر الكتب الرقميه</h2>
+            <p>
+               أحدث الكتب الرقمية التي تناسبكم
+            </p>
+        </div>
+        <div class="footer-links">
+            <h3>روابط سريعة</h3>
+            <a href="#hero">الرئيسية</a>
+            <a href="#products">المنتجات</a>
+            <a href="#contact">للتواصل </a>
+        </div>
+
+        <div class="footer-links">
+            <h3>الاصناف</h3>
+            <a href="#products">روايات</a>
+            <a href="#products">تقنية</a>
+            <a href="#products">تاريخ</a>
+            <a href="#products">دينيه</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>تابعنا علي </h3>
+            <div class="social-links">
+                <a href="#">فيسبوك</a>
+                <a href="#">انستغرام</a>
+                <a href="#">اكس</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 متجر الكتب الرقميه - جميع الحقوق محفوظة
+        </p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
